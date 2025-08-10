@@ -34,7 +34,7 @@ int main() {
         while (1) {
             printf("Guess the winning number (%d-%d) :\n", min, max);
             if (scanf("%d", &guess) != 1) {
-                // clear buffer
+               
                 while (getchar() != '\n');
                 printf("Please enter a valid number.\n");
                 continue;
