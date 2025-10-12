@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
+// ฟังก์ชันตรวจสอบจำนวนเฉพาะ
 int isPrime(int num) {
     if (num < 2) return 0;
     for (int i = 2; i <= sqrt(num); i++) {
@@ -12,28 +13,32 @@ int isPrime(int num) {
 int main() {
     int n;
 
+    // รับค่าขนาดของอาร์เรย์
     printf("Enter N : ");
     scanf("%d", &n);
 
     int arr[n];
 
+    // รับค่าของสมาชิกในอาร์เรย์
     for (int i = 0; i < n; i++) {
         printf("Enter value[%d] : ", i);
         scanf("%d", &arr[i]);
     }
 
+    // แสดงตำแหน่งของสมาชิก
     printf("Index:  ");
     for (int i = 0; i < n; i++) {
         printf("%2d ", i);
     }
     printf("\n");
-    
+
+    // แสดงค่าของสมาชิก โดยใช้ "#" แทนค่าที่ไม่ใช่จำนวนเฉพาะ
     printf("Array:  ");
     for (int i = 0; i < n; i++) {
         if (isPrime(arr[i])) {
             printf("%2d ", arr[i]);
         } else {
-            printf("%2s ", "#");
+            printf(" # ");
         }
     }
     printf("\n");
