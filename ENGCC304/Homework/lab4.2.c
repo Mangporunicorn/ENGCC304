@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 int main() {
-    char empID[11]; 
+    char employeeID[10]; // รับได้สูงสุด 10 ตัวอักษร + null terminator
     int hours;
     float rate, salary;
 
     printf("Input the Employees ID(Max. 10 chars):\n");
-    scanf("%10s", empID); 
+    scanf("%s", employeeID);
 
     printf("Input the working hrs:\n");
     scanf("%d", &hours);
@@ -16,8 +16,7 @@ int main() {
 
     salary = hours * rate;
 
-    printf("Expected Output:\n");
-    printf("Employees ID = %s\n", empID);
+    printf("Employees ID = %s\n", employeeID);
     printf("Salary = U$ %.2f\n", salary);
 
     return 0;
