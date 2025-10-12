@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    float H, W, area;
+    int H,W;
+    float area;
 
     printf("Enter height (H): ");
     scanf("%f", &H);
@@ -15,3 +16,4 @@ int main() {
 
     return 0;
 }
+
